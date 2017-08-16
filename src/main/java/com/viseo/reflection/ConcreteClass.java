@@ -13,6 +13,9 @@ public class ConcreteClass extends BaseClass implements BaseInterface {
 
     Object defaultObject;
 
+    public ConcreteClass() {
+    }
+
     public ConcreteClass(int attr) {
         this.attr = attr;
     }
@@ -28,16 +31,19 @@ public class ConcreteClass extends BaseClass implements BaseInterface {
         return 0;
     }
 
+    public void classMethod(int val){
+        System.out.println("Method called with value : "+ val);
+    }
 
     @Override
-    public int secondMethod() {
-        System.out.println("Override method from base class");
+    public int secondMethod(int val) {
+        System.out.println("method from base class called with value : " + val);
         return 0;
     }
 
     @Override
     public void thirdMethod() {
-        System.out.println("Override method and using method");
+        System.out.print("Method called -> ");
         super.thirdMethod();
     }
 
